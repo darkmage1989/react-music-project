@@ -1,3 +1,6 @@
+import playlist01 from '../img/playlist01.png'
+import playlist02 from '../img/playlist02.png'
+import playlist03 from '../img/playlist03.png'
 function Sidebar() {
   return (
     <div className="main__sidebar sidebar">
@@ -11,7 +14,7 @@ function Sidebar() {
             <a className="sidebar__link" href="#">
               <img
                 className="sidebar__img"
-                src="img/playlist01.png"
+                src={playlist01}
                 alt="day's playlist"
               ></img>
             </a>
@@ -20,7 +23,7 @@ function Sidebar() {
             <a className="sidebar__link" href="#">
               <img
                 className="sidebar__img"
-                src="img/playlist02.png"
+                src={playlist02}
                 alt="day's playlist"
               ></img>
             </a>
@@ -29,7 +32,7 @@ function Sidebar() {
             <a className="sidebar__link" href="#">
               <img
                 className="sidebar__img"
-                src="img/playlist03.png"
+                src={playlist03}
                 alt="day's playlist"
               ></img>
             </a>
