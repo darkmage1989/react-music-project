@@ -3,10 +3,12 @@ const Burger = () => {
   const [visible, setVisible] = useState(true)
   const toggleVisibility = () => setVisible(!visible)
   return (
-    <div onClick={toggleVisibility} className="nav__burger burger">
-      <span className="burger__line"></span>
-      <span className="burger__line"></span>
-      <span className="burger__line"></span>
+    <>
+      <div onClick={toggleVisibility} className="nav__burger burger">
+        <span className="burger__line"></span>
+        <span className="burger__line"></span>
+        <span className="burger__line"></span>
+      </div>
       {!visible && (
         <div className="nav__menu menu">
           <ul className="menu__list">
@@ -28,7 +30,7 @@ const Burger = () => {
           </ul>
         </div>
       )}
-    </div>
+    </>
   )
 }
 export default Burger
