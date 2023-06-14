@@ -2,6 +2,8 @@ import Search from './Search'
 import Filter from './Filter'
 import PlaylistTitle from './PlaylistTitle'
 import Playlist from './Playlist'
+// import MyLoader from './Skeleton'
+
 function Centerblock() {
   return (
     <div className="main__centerblock centerblock">
