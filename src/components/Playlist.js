@@ -56,10 +56,10 @@ function Playlist() {
 
   useEffect(() => {
     setIsLoading(true)
-    setTimeout(() => {
+    const skeletonTImer = setTimeout(() => {
       setIsLoading(false)
     }, 5000)
-    return () => clearTimeout()
+    return () => clearTimeout(skeletonTImer)
   }, [])
   return (
     <div className="content__playlist playlist">
