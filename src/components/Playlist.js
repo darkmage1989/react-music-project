@@ -59,6 +59,7 @@ function Playlist() {
     setTimeout(() => {
       setIsLoading(false)
     }, 5000)
+    return () => clearTimeout()
   }, [])
   return (
     <div className="content__playlist playlist">
