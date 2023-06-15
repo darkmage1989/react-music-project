@@ -1,11 +1,4 @@
-const artists = [
-  'Guilt',
-  'Dynoro, Outwork, Mr. Gee',
-  'Ali Bakgor',
-  'Стоункат, Psychopath',
-  'Jaded, Will Clarke, AR/CO',
-  'HYBIT, Mr. Black, Offer Nissim, Hi Profile'
-]
+import Track from './Track'
 function Author() {
   return (
     <div
@@ -16,13 +9,7 @@ function Author() {
         left: '110px'
       }}
     >
-      {Array.from(artists).map((artist) => {
-        return (
-          <span className="filter__dropdown__text" key={artist}>
-            {artist}
-          </span>
-        )
-      })}
+      <Track />
     </div>
   )
 }
