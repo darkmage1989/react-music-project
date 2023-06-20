@@ -1,8 +1,9 @@
+import styles from './Search.module.css'
 function Search() {
   return (
-    <div className="centerblock__search search">
+    <div className={styles.search}>
       <svg
-        className="search__svg"
+        className={styles.search__svg}
         width="17"
         height="18"
         viewBox="0 0 17 18"
@@ -23,7 +24,7 @@ function Search() {
         />
       </svg>
       <input
-        className="search__text"
+        className={styles.search__text}
         type="search"
         placeholder="Поиск"
         name="search"

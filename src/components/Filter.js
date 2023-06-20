@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Author from './Author'
 import Year from './Year'
 import Genre from './Genre'
+import styles from './Filter.module.css'
 
 function Filter() {
   const [visibleFilter, setVisibleFilter] = useState(null)
@@ -9,12 +10,12 @@ function Filter() {
     setVisibleFilter(visibleFilter === filter ? null : filter)
   }
   return (
-    <div className="centerblock__filter filter">
-      <div className="filter__title">Искать по:</div>
+    <div className={styles.filter}>
+      <div className={styles.title}>Искать по:</div>
       <div
         onClick={() => toggleVisibleFilter('author')}
-        className={`filter__button button-author _btn-text ${
-          visibleFilter === 'author' ? 'filter__active' : '_btn-text'
+        className={`${styles.filter__button} ${styles.btn_text} ${
+          visibleFilter === 'author' ? styles.filter__active : styles.btn_text
         }`}
       >
         исполнителю
@@ -22,8 +23,8 @@ function Filter() {
       {visibleFilter === 'author' && <Author />}
       <div
         onClick={() => toggleVisibleFilter('year')}
-        className={`filter__button button-author _btn-text ${
-          visibleFilter === 'year' ? 'filter__active' : '_btn-text'
+        className={`${styles.filter__button} ${styles.btn_text} ${
+          visibleFilter === 'year' ? styles.filter__active : styles.btn_text
         }`}
       >
         году выпуска
@@ -32,8 +33,8 @@ function Filter() {
 
       <div
         onClick={() => toggleVisibleFilter('genre')}
-        className={`filter__button button-author _btn-text ${
-          visibleFilter === 'genre' ? 'filter__active' : '_btn-text'
+        className={`${styles.filter__button} ${styles.btn_text} ${
+          visibleFilter === 'genre' ? styles.filter__active : styles.btn_text
         }`}
       >
         жанру

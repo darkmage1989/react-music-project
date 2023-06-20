@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Note from './Note'
 import Like from './Like'
 import MyLoader from './Skeleton'
+import styles from './Playlist.module.css'
 
 function Playlist() {
   const data = {
@@ -62,281 +63,281 @@ function Playlist() {
     return () => clearTimeout(skeletonTImer)
   }, [])
   return (
-    <div className="content__playlist playlist">
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+    <div className={styles.playlist}>
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[1]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[1]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[1]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[1]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[2]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[2]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[2]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[2]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[3]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[3]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[3]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[3]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[4]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[4]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[4]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[4]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[5]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[5]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[5]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[5]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[6]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[6]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[6]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[6]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[7]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[7]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[7]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[7]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[8]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[8]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[8]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[8]}
             </span>
           </div>
         </div>
       </div>
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
+      <div className={styles.playlist__item}>
+        <div className={styles.playlist__track}>
+          <div className={styles.track__title}>
+            <div className={styles.track__title_image}>
               {isLoading ? <MyLoader /> : <Note />}
             </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
+            <div>
+              <a className={styles.track__title_link} href="http://">
                 {isLoading ? <MyLoader /> : data.name[9]}{' '}
-                <span className="track__title-span"></span>
+                <span className={styles.track__title_span}></span>
               </a>
             </div>
           </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
+          <div className={styles.track__author}>
+            <a className={styles.track__author_link} href="http://">
               {isLoading ? <MyLoader /> : data.author[9]}
             </a>
           </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
+          <div className={styles.track__album}>
+            <a className={styles.track__album_link} href="http://">
               {isLoading ? <MyLoader /> : data.albom[9]}
             </a>
           </div>
-          <div className="track__time">
+          <div>
             {isLoading ? <MyLoader /> : data.likes}
-            <span className="track__time-text">
+            <span className={styles.track__time_text}>
               {isLoading ? <MyLoader /> : data.time[9]}
             </span>
           </div>
