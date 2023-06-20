@@ -1,8 +1,9 @@
 import Track from './Track'
+import styles from './Dropdown.module.css'
 function Author() {
   return (
     <div
-      className="filter__dropdown"
+      className={styles.dropdown}
       style={{
         position: 'absolute',
         top: '50px',

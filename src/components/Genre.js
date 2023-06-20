@@ -1,3 +1,4 @@
+import styles from './Dropdown.module.css'
 const geners = [
   'Rock',
   'Pop',
@@ -24,7 +25,7 @@ const geners = [
 function Genre() {
   return (
     <div
-      className="filter__dropdown"
+      className={styles.dropdown}
       style={{
         position: 'absolute',
         top: '50px',
@@ -32,7 +33,7 @@ function Genre() {
       }}
     >
       {Array.from(geners).map((gener) => {
-        return <span className="filter__dropdown__text" key={gener}>{gener}</span>
+        return <span className={styles.item} key={gener}>{gener}</span>
       })}
     </div>
   )

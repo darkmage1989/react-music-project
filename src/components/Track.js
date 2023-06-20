@@ -1,3 +1,4 @@
+import styles from './Dropdown.module.css'
 function Track() {
   const artists = [
     'Guilt',
@@ -9,7 +10,7 @@ function Track() {
   ]
   return Array.from(artists).map((artist) => {
     return (
-      <span className="filter__dropdown__text" key={artist}>
+      <span className= {styles.item} key={artist}>
         {artist}
       </span>
     )
