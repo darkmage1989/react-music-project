@@ -1,5 +1,5 @@
 import logo from '../img/logo.png'
-import Burger from '../components/Burger'
+import Burger from './Burger'
 function Nav() {
   return (
     <nav className="main__nav nav">

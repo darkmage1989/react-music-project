@@ -1,12 +1,13 @@
+import styles from './Bar.module.css'
 function Bar() {
   return (
-    <div className="bar">
-      <div className="bar__content">
-        <div className="bar__player-progress"></div>
-        <div className="bar__player-block">
-          <div className="bar__player player">
-            <div className="player__controls">
-              <div className="player__btn-prev">
+    <div className={styles.bar}>
+      <div className={styles.content}>
+        <div className={styles.player__progress}></div>
+        <div className={styles.player__block}>
+          <div className={styles.player}>
+            <div className={styles.player__controls}>
+              <div className={styles.player__btn_prev}>
                 <svg
                   width="16"
                   height="14"
@@ -21,9 +22,9 @@ function Bar() {
                   />
                 </svg>
               </div>
-              <div className="player__btn-play _btn">
+              <div className={`${styles.player__btn_play} ${'_btn'}`}>
                 <svg
-                  className="player__btn-play-svg"
+                  className={styles.player__btn_play_svg}
                   alt="play"
                   width="15"
                   height="20"
@@ -37,9 +38,9 @@ function Bar() {
                   />
                 </svg>
               </div>
-              <div className="player__btn-next">
+              <div className={styles.player__btn_next}>
                 <svg
-                  className="player__btn-next-svg"
+                  className={styles.player__btn_next_svg}
                   alt="next"
                   width="16"
                   height="14"
@@ -54,9 +55,9 @@ function Bar() {
                   />
                 </svg>
               </div>
-              <div className="player__btn-repeat _btn-icon">
+              <div className={`${styles.player__btn_repeat} ${'_btn-icon'}`}>
                 <svg
-                  className="player__btn-repeat-svg"
+                  className={styles.player__btn_repeat_svg}
                   alt="repeat"
                   width="20"
                   height="18"
@@ -74,9 +75,9 @@ function Bar() {
                   />
                 </svg>
               </div>
-              <div className="player__btn-shuffle _btn-icon">
+              <div className={`${styles.player__btn_shuffle} ${'_btn-icon'}`} >
                 <svg
-                  className="player__btn-shuffle-svg"
+                  className={styles.player__btn_shuffle_svg}
                   alt="shuffle"
                   width="20"
                   height="18"
@@ -96,11 +97,11 @@ function Bar() {
               </div>
             </div>
 
-            <div className="player__track-play track-play">
-              <div className="track-play__contain">
-                <div className="track-play__image">
+            <div className={styles.player__track_play}>
+              <div className={styles.track_play__contain}>
+                <div className={styles.track_play__image}>
                   <svg
-                    className="track-play__svg"
+                    className={styles.track_play__svg}
                     alt="music"
                     width="20"
                     height="19"
@@ -125,22 +126,22 @@ function Bar() {
                     />
                   </svg>
                 </div>
-                <div className="track-play__author">
-                  <a className="track-play__author-link" href="http://">
+                <div className={styles.track_play__author}>
+                  <a className={styles.track_play__author_link} href="http://">
                     Ты та...
                   </a>
                 </div>
-                <div className="track-play__album">
-                  <a className="track-play__album-link" href="http://">
+                <div className={styles.track_play__album}>
+                  <a className={styles.track_play__album_link} href="http://">
                     Баста
                   </a>
                 </div>
               </div>
 
-              <div className="track-play__like-dis">
-                <div className="track-play__like _btn-icon">
+              <div className={styles.track_play__like_dis}>
+                <div className={`${styles.track_play__like} ${'_btn-icon'}`}>
                   <svg
-                    className="track-play__like-svg"
+                    className= {styles.track_play__like_svg}
                     alt="like"
                     width="16"
                     height="14"
@@ -154,9 +155,9 @@ function Bar() {
                     />
                   </svg>
                 </div>
-                <div className="track-play__dislike _btn-icon">
+                <div className={`${styles.track_play__dislike} ${'_btn-icon'}`}>
                   <svg
-                    className="track-play__dislike _btn-icon"
+                    className={`${styles.track_play__dislike} ${'_btn-icon'}`}
                     width="16"
                     height="15"
                     viewBox="0 0 16 15"
@@ -173,11 +174,11 @@ function Bar() {
               </div>
             </div>
           </div>
-          <div className="bar__volume-block volume">
-            <div className="volume__content">
-              <div className="volume__image">
+          <div className= {styles.volume_block}>
+            <div className={styles.volume__content}>
+              <div className={styles.volume__image}>
                 <svg
-                  className="volume__svg"
+                  className={styles.volume__svg}
                   alt="volume"
                   width="14"
                   height="18"
@@ -203,9 +204,9 @@ function Bar() {
                   />
                 </svg>
               </div>
-              <div className="volume__progress _btn">
+              <div className={`${styles.volume__progress} ${'_btn'}`}>
                 <input
-                  className="volume__progress-line _btn"
+                  className={`${styles.volume__progress_line} ${'_btn'}`}
                   type="range"
                   name="range"
                 ></input>

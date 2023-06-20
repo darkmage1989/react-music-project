@@ -1,323 +1,344 @@
+import { useState, useEffect } from 'react'
 import Note from './Note'
 import Like from './Like'
-function Playlist(params) {
+import MyLoader from './Skeleton'
+
+function Playlist() {
+  const data = {
+    name: [
+      'Guilt',
+      'Elektro',
+      'I’m Fire',
+      'Non Stop',
+      'Run Run',
+      'Eyes on Fire',
+      'Mucho Bien',
+      'Calvin Harris, Disciples',
+      'Morena '
+    ],
+    notes: <Note />,
+    likes: <Like />,
+    author: [
+      'Nero',
+      'Dynoro, Outwork, Mr. Gee',
+      'Ali Bakgor',
+      'Стоункат, Psychopath',
+      'Jaded, Will Clarke, AR/CO',
+      'Blue Foundation, Zeds Dead',
+      'HYBIT, Mr. Black, Offer Nissim, Hi Profile',
+      'minthaze',
+      'Calvin Harris, Disciples'
+    ],
+    albom: [
+      'Welcome Reality',
+      'Elektro',
+      'I’m Fire',
+      'Non Stop',
+      'Run Run',
+      'Eyes on Fire',
+      'Mucho Bien',
+      'Captivating',
+      'How Deep Is Your Love'
+    ],
+    time: [
+      '4:44',
+      '2:22',
+      '2:22',
+      '4:12',
+      '2:54',
+      '5:20',
+      '3:41',
+      '1:48',
+      '3:32'
+    ]
+  }
+  const [isLoading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    setIsLoading(true)
+    const skeletonTImer = setTimeout(() => {
+      setIsLoading(false)
+    }, 5000)
+    return () => clearTimeout(skeletonTImer)
+  }, [])
   return (
     <div className="content__playlist playlist">
       <div className="playlist__item">
         <div className="playlist__track track">
           <div className="track__title">
             <div className="track__title-image">
-              <Note />
+              {isLoading ? <MyLoader /> : <Note />}
             </div>
             <div className="track__title-text">
               <a className="track__title-link" href="http://">
-                Guilt <span className="track__title-span"></span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Nero
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Welcome Reality
-            </a>
-          </div>
-          <div className="track__time">
-            <Like />
-            <span className="track__time-text">4:44</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-             <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                Elektro <span className="track__title-span"></span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Dynoro, Outwork, Mr. Gee
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Elektro
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">2:22</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                I’m Fire <span className="track__title-span"></span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Ali Bakgor
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              I’m Fire
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">2:22</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                Non Stop <span className="track__title-span">(Remix)</span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Стоункат, Psychopath
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Non Stop
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">4:12</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                Run Run <span className="track__title-span">(feat. AR/CO)</span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Jaded, Will Clarke, AR/CO
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Run Run
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">2:54</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                Eyes on Fire{' '}
-                <span className="track__title-span">(Zeds Dead Remix)</span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Blue Foundation, Zeds Dead
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Eyes on Fire
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">5:20</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                Mucho Bien{' '}
-                <span className="track__title-span">(Hi Profile Remix)</span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              HYBIT, Mr. Black, Offer Nissim, Hi Profile
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Mucho Bien
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">3:41</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                Knives n Cherries <span className="track__title-span"></span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              minthaze
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Captivating
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">1:48</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                How Deep Is Your Love{' '}
+                {isLoading ? <MyLoader /> : data.name[1]}{' '}
                 <span className="track__title-span"></span>
               </a>
             </div>
           </div>
           <div className="track__author">
             <a className="track__author-link" href="http://">
-              Calvin Harris, Disciples
+              {isLoading ? <MyLoader /> : data.author[1]}
             </a>
           </div>
           <div className="track__album">
             <a className="track__album-link" href="http://">
-              How Deep Is Your Love
+              {isLoading ? <MyLoader /> : data.albom[1]}
             </a>
           </div>
           <div className="track__time">
-          <Like />
-            <span className="track__time-text">3:32</span>
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[1]}
+            </span>
           </div>
         </div>
       </div>
-
       <div className="playlist__item">
         <div className="playlist__track track">
           <div className="track__title">
             <div className="track__title-image">
-            <Note />
+              {isLoading ? <MyLoader /> : <Note />}
             </div>
             <div className="track__title-text">
               <a className="track__title-link" href="http://">
-                Morena <span className="track__title-span"></span>
-              </a>
-            </div>
-          </div>
-          <div className="track__author">
-            <a className="track__author-link" href="http://">
-              Tom Boxer
-            </a>
-          </div>
-          <div className="track__album">
-            <a className="track__album-link" href="http://">
-              Soundz Made in Romania
-            </a>
-          </div>
-          <div className="track__time">
-          <Like />
-            <span className="track__time-text">3:36</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="playlist__item">
-        <div className="playlist__track track">
-          <div className="track__title">
-            <div className="track__title-image">
-            <Note />
-            </div>
-            <div className="track__title-text">
-              <a className="track__title-link" href="http://">
-                {' '}
+                {isLoading ? <MyLoader /> : data.name[2]}{' '}
                 <span className="track__title-span"></span>
               </a>
             </div>
           </div>
           <div className="track__author">
-            <a className="track__author-link" href="http://"></a>
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[2]}
+            </a>
           </div>
           <div className="track__album">
-            <a className="track__album-link" href="http://"></a>
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[2]}
+            </a>
           </div>
           <div className="track__time">
-          <Like />
-            <span className="track__time-text"></span>
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[2]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[3]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[3]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[3]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[3]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[4]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[4]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[4]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[4]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[5]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[5]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[5]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[5]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[6]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[6]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[6]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[6]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[7]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[7]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[7]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[7]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[8]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[8]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[8]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[8]}
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="playlist__item">
+        <div className="playlist__track track">
+          <div className="track__title">
+            <div className="track__title-image">
+              {isLoading ? <MyLoader /> : <Note />}
+            </div>
+            <div className="track__title-text">
+              <a className="track__title-link" href="http://">
+                {isLoading ? <MyLoader /> : data.name[9]}{' '}
+                <span className="track__title-span"></span>
+              </a>
+            </div>
+          </div>
+          <div className="track__author">
+            <a className="track__author-link" href="http://">
+              {isLoading ? <MyLoader /> : data.author[9]}
+            </a>
+          </div>
+          <div className="track__album">
+            <a className="track__album-link" href="http://">
+              {isLoading ? <MyLoader /> : data.albom[9]}
+            </a>
+          </div>
+          <div className="track__time">
+            {isLoading ? <MyLoader /> : data.likes}
+            <span className="track__time-text">
+              {isLoading ? <MyLoader /> : data.time[9]}
+            </span>
           </div>
         </div>
       </div>

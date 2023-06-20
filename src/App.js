@@ -1,7 +1,7 @@
-import Nav from './components/Nav'
-import Centerblock from './components/Centerblock'
-import Sidebar from './components/Sidebar'
-import Bar from './components/Bar'
+import Nav from '../src/components/Nav'
+import Centerblock from '../src/components/Centerblock'
+import Sidebar from '../src/components/Sidebar'
+import Bar from '../src/components/Bar'
 function App() {
   return (
     <div className="wrapper">

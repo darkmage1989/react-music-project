@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import Author from './Author'
+import Year from './Year'
+import Genre from './Genre'
 
 function Filter() {
   const [visibleFilter, setVisibleFilter] = useState(null)
@@ -10,49 +13,32 @@ function Filter() {
       <div className="filter__title">Искать по:</div>
       <div
         onClick={() => toggleVisibleFilter('author')}
-        className="filter__button button-author _btn-text"
+        className={`filter__button button-author _btn-text ${
+          visibleFilter === 'author' ? 'filter__active' : '_btn-text'
+        }`}
       >
         исполнителю
       </div>
-      {visibleFilter === 'author' && (
-        <div className="test">
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-        </div>
-      )}
+      {visibleFilter === 'author' && <Author />}
       <div
         onClick={() => toggleVisibleFilter('year')}
-        className="filter__button button-year _btn-text"
+        className={`filter__button button-author _btn-text ${
+          visibleFilter === 'year' ? 'filter__active' : '_btn-text'
+        }`}
       >
         году выпуска
       </div>
-      {visibleFilter === 'year' && (
-        <div className="test">
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-        </div>
-      )}
+      {visibleFilter === 'year' && <Year />}
+
       <div
         onClick={() => toggleVisibleFilter('genre')}
-        className="filter__button button-genre _btn-text"
+        className={`filter__button button-author _btn-text ${
+          visibleFilter === 'genre' ? 'filter__active' : '_btn-text'
+        }`}
       >
         жанру
       </div>
-      {visibleFilter === 'genre' && (
-        <div className="test">
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-          <span>dasfdsgdfgdff</span>
-        </div>
-      )}
+      {visibleFilter === 'genre' && <Genre />}
     </div>
   )
 }
