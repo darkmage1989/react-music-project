@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Note from './Note'
-import Like from './Like'
-import MyLoader from './Skeleton'
+import Note from '../Note/Note'
+import Like from '../Like/Like'
+import MyLoader from '../Skeleton/Skeleton'
 import styles from './Playlist.module.css'
 
 function Playlist() {

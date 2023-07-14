@@ -1,10 +1,9 @@
-import Search from './Search'
-import Filter from './Filter'
-import PlaylistTitle from './PlaylistTitle'
-import Playlist from './Playlist'
+import Search from '../Search/Search'
+import Filter from '../Filter/Filter'
+import PlaylistTitle from '../PlaylistTitle/PlaylistTitle'
+import Playlist from '../PlayList/Playlist'
 import styles from './Centerblock.module.css'
 // import MyLoader from './Skeleton'
-
 function Centerblock() {
   return (
     <div className={styles.main__centerblock}>

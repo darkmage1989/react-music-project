@@ -28,8 +28,8 @@ ul li {
 @font-face {
   font-family: 'StratosSkyeng';
   src: local('StratosSkyeng'), local('StratosSkyeng'),
-    url('../fonts/Stratos-Medium.woff2') format('woff2'),
-    url('../fonts/Stratos-Medium.woff') format('woff');
+    url('../../fonts/Stratos-Medium.woff2') format('woff2'),
+    url('../../fonts/Stratos-Medium.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -41,12 +41,6 @@ body {
   color: #ffffff;
 }
 
-.wrapper {
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  background-color: #383838;
-}
 
 .container {
   max-width: 1920px;
@@ -54,6 +48,12 @@ body {
   margin: 0 auto;
   position: relative;
   background-color: #181818;
+}
+.main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 ._btn-icon:hover svg {
@@ -74,17 +74,4 @@ body {
   stroke: #ffffff;
   cursor: pointer;
 }
-.track__title-svg {
-  width: 18px;
-  height: 17px;
-  fill: transparent;
-  stroke: #4e4e4e;
-}
-.track__time-svg {
-  width: 14px;
-  height: 12px;
-  margin-right: 17px;
-  fill: transparent;
-  stroke: #696969;
-}
-/*# sourceMappingURL=style.css.map */
+

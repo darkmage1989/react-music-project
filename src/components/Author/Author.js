@@ -1,5 +1,5 @@
-import Track from './Track'
-import styles from './Dropdown.module.css'
+import Track from '../Track/Track'
+import styles from '../Dropdown/Dropdown.module.css'
 function Author() {
   return (
     <div

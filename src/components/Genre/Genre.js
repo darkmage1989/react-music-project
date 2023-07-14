@@ -1,4 +1,4 @@
-import styles from './Dropdown.module.css'
+import styles from '../Dropdown/Dropdown.module.css'
 const geners = [
   'Rock',
   'Pop',

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import styles from './Burger.module.css'
+import { Link } from 'react-router-dom'
 const Burger = () => {
   const [visible, setVisible] = useState(true)
   const toggleVisibility = () => setVisible(!visible)
@@ -14,19 +15,19 @@ const Burger = () => {
         <div className={styles.nav__menu}>
           <ul className={styles.menu__list}>
             <li className={styles.menu__item}>
-              <a href="http://" className={styles.menu__link}>
-                Главное
-              </a>
+            <Link className={styles.menu__link} to = '/'>
+                Главная
+              </Link>
             </li>
             <li className={styles.menu__item}>
-              <a href="http://" className={styles.menu__link}>
+              <Link className={styles.menu__link} to = '/MyTracks'>
                 Мой плейлист
-              </a>
+              </Link>
             </li>
             <li className={styles.menu__item}>
-              <a href="http://" className={styles.menu__link}>
+            <Link className={styles.menu__link} to = '/Login'>
                 Войти
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

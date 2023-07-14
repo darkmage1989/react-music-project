@@ -1,5 +1,5 @@
-import logo from '../img/logo.png'
-import Burger from './Burger'
+import logo from '../../img/logo.png'
+import Burger from '../Burger/Burger'
 import styles from './Nav.module.css'
 function Nav() {
   return (
