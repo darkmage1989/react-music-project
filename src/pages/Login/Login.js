@@ -1,7 +1,6 @@
 import styles from '../Login/Login.module.css'
 import logo from '../../img/logo.png'
 import { useNavigate } from 'react-router'
-import AppRoutes from '../../routes'
 function Login() {
   const navigate = useNavigate()
   const registrationClick = () => {

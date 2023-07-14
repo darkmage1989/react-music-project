@@ -13,7 +13,7 @@ function Indy() {
         <Nav />
         <div className={styles.main__centerblock}>
           <Search />
-          <h2 className={styles.centerblock__h2}>Инди ебаное</h2>
+          <h2 className={styles.centerblock__h2}>Инди</h2>
           <Filter />
           <div className={styles.centerblock__content}>
             <PlaylistTitle />

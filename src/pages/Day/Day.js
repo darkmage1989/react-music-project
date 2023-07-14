@@ -13,7 +13,7 @@ function Day() {
         <Nav />
         <div className={styles.main__centerblock}>
           <Search />
-          <h2 className={styles.centerblock__h2}>День ебаный</h2>
+          <h2 className={styles.centerblock__h2}>День</h2>
           <Filter />
           <div className={styles.centerblock__content}>
             <PlaylistTitle />

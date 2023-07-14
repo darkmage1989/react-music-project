@@ -13,7 +13,7 @@ function Dance() {
         <Nav />
         <div className={styles.main__centerblock}>
           <Search />
-          <h2 className={styles.centerblock__h2}>Танцы ебаные</h2>
+          <h2 className={styles.centerblock__h2}>Танцы</h2>
           <Filter />
           <div className={styles.centerblock__content}>
             <PlaylistTitle />
