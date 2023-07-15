@@ -1,7 +1,12 @@
 import styles from '../Registration/Registration.module.css'
 import logo from '../../img/logo.png'
+import { useNavigate } from 'react-router'
 
 function Registration() {
+  const navigate = useNavigate()
+  const registrationBtn = () => {
+    navigate('/Login')
+  }
   return (
     <div className={styles.registration}>
       <div className={styles.registration__container}>
@@ -20,7 +25,7 @@ function Registration() {
           placeholder="Повторите пароль"
           type="password"
         ></input>
-        <button className={styles.registration__button}>
+        <button onClick={registrationBtn} className={styles.registration__button}>
           Зарегистрироваться
         </button>
       </div>

@@ -3,7 +3,6 @@ import Filter from '../Filter/Filter'
 import PlaylistTitle from '../PlaylistTitle/PlaylistTitle'
 import Playlist from '../PlayList/Playlist'
 import styles from './Centerblock.module.css'
-// import MyLoader from './Skeleton'
 function Centerblock() {
   return (
     <div className={styles.main__centerblock}>

@@ -3,6 +3,7 @@ import playlist02 from '../../img/playlist02.png'
 import playlist03 from '../../img/playlist03.png'
 import styles from './Sidebar.module.css'
 import { Link } from 'react-router-dom'
+import { PATH } from '../../constans'
 function Sidebar() {
   return (
     <div className={styles.sidebar}>
@@ -13,7 +14,7 @@ function Sidebar() {
       <div className={styles.sidebar__block}>
         <div className={styles.sidebar__list}>
           <div className={styles.sidebar__item}>
-            <Link className={styles.sidebar__link} to= '/day'>
+            <Link className={styles.sidebar__link} to={`Category/${PATH.url}`}>
               <img
                 className={styles.sidebar__img}
                 src={playlist01}
@@ -22,7 +23,7 @@ function Sidebar() {
             </Link>
           </div>
           <div className={styles.sidebar__item}>
-            <Link className={styles.sidebar__link} to= '/dance'>
+            <Link className={styles.sidebar__link} to={`Category/${PATH.url}`}>
               <img
                 className={styles.sidebar__img}
                 src={playlist02}
@@ -31,7 +32,7 @@ function Sidebar() {
             </Link>
           </div>
           <div className={styles.sidebar__item}>
-            <Link className={styles.sidebar__link} to= '/indy'>
+            <Link className={styles.sidebar__link} to={`Category/${PATH.url}`}>
               <img
                 className={styles.sidebar__img}
                 src={playlist03}

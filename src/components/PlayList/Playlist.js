@@ -59,7 +59,7 @@ function Playlist() {
     setIsLoading(true)
     const skeletonTImer = setTimeout(() => {
       setIsLoading(false)
-    }, 5000)
+    }, 1000)
     return () => clearTimeout(skeletonTImer)
   }, [])
   return (
